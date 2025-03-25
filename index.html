@@ -9,14 +9,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="KWYLDUPbMWc0kQb2gP0dx5MmcOOUWG_3Y1IoFVITOME" />
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #back-to-top {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer;
+      z-index: 99;
+    }
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .spinner {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #3498db;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .top-nav {
+      position: fixed;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      flex-direction: column;
+      text-align: left;
+      z-index: 100;
+    }
+    
+    .top-nav a {
+      margin: 10px 0;
+      text-decoration: none;
+      color: #777777;
+      font-weight: normal;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+    
+    .top-nav a:hover {
+      color: #0066cc;
+    }
+  </style>
 </head>
 
 <body>
+  <div id="loader"><div class="spinner"></div></div>
+  <div class="top-nav">
+    <a href="#profile">Profile</a>
+    <a href="#news">News</a>
+    <a href="#research">Research</a>
+    <a href="#products">Products</a>
+    <a href="#service">Service</a>
+  </div>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <!-- prfile -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="profile" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
@@ -45,34 +120,61 @@
         </tbody></table>
 
         <!-- news -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="news" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading><b>News</b></heading>
+              <!-- Recent news always visible -->
               <p>
                 [2025.02] <a href="https://byteaigc.github.io/coap/"> COAP</a> and <a href="https://byteaigc.github.io/ID-Patch/"> ID-Patch</a> are accepted to CVPR 2025. 
               </p>
               <p>
                 [2024.02] <a href="#tiktok-ai-self"> TikTok AI Self</a> has been launched and is available globally.
               </p>
+              
+              <!-- Older news hidden by default -->
+              <div id="older-news" style="display: none;">
+                <p>
+                  [2023.07] <a target="_blank" href="https://jitengmu.github.io/ActorsNeRF">ActorsNeRF</a> is accepted to ICCV 2023.
+                </p>
+                <p>
+                  [2023.05] <a href="#tiktok-ai-avatars">TikTok AI Avatars</a> is launched globally.
+                </p>
+                <p>
+                  [2022.08] <a target="_blank" href="./projects/agileavatar/index.html">AgileAvatar</a> is accepted to SIGGRAPH Asia 2022.
+                </p>
+                <p>
+                  [2022.06] <a href="#tiktok-avatars">TikTok Avatars</a> is launched globally.
+                </p>
+              </div>
+              
+              <!-- Toggle button -->
               <p>
-                [2023.07] <a target="_blank" href="https://jitengmu.github.io/ActorsNeRF">ActorsNeRF</a> is accepted to ICCV 2023.
+                <a href="javascript:void(0);" id="news-toggle" style="color: #777; text-decoration: none; cursor: pointer;">
+                  <span id="toggle-text">Show More ▼</span>
+                </a>
               </p>
-              <p>
-                [2023.05] <a href="#tiktok-ai-avatars">TikTok AI Avatars</a> is launched globally.
-              </p>
-              <p>
-                [2022.08] <a target="_blank" href="./projects/agileavatar/index.html">AgileAvatar</a> is accepted to SIGGRAPH Asia 2022.
-              </p>
-              <p>
-                [2022.06] <a href="#tiktok-avatars">TikTok Avatars</a> is launched globally.
-              </p>
+              
+              <script>
+                document.getElementById('news-toggle').addEventListener('click', function() {
+                  const olderNews = document.getElementById('older-news');
+                  const toggleText = document.getElementById('toggle-text');
+                  
+                  if (olderNews.style.display === 'none') {
+                    olderNews.style.display = 'block';
+                    toggleText.innerHTML = 'Hide ▲';
+                  } else {
+                    olderNews.style.display = 'none';
+                    toggleText.innerHTML = 'Show More ▼';
+                  }
+                });
+              </script>
             </td>
           </tr>
         </tbody></table>
 
         <!-- research title -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="research" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading><b>Research</b></heading>
@@ -252,7 +354,7 @@
         </tbody></table>
 
         <!-- production title -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="products" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading><b>Products</b></heading>
@@ -323,7 +425,7 @@
         </tbody></table>
 
         <!-- service and paper review -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="service" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading><b>Service</b></heading>
@@ -347,6 +449,39 @@
       </td>
     </tr>
   </table>
+  <div id="back-to-top">↑</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.play();
+                video.controls = true;
+            });
+            video.addEventListener('mouseleave', () => {
+                video.pause();
+                video.controls = false;
+            });
+        });
+    });
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            document.getElementById("back-to-top").style.display = "block";
+        } else {
+            document.getElementById("back-to-top").style.display = "none";
+        }
+    }
+    
+    document.getElementById("back-to-top").onclick = function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    window.addEventListener('load', function() {
+        document.getElementById('loader').style.display = 'none';
+    });
+  </script>
 </body>
 
 </html>
