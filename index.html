@@ -9,16 +9,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="KWYLDUPbMWc0kQb2gP0dx5MmcOOUWG_3Y1IoFVITOME" />
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <div id="loader"><div class="spinner"></div></div>
-  <div class="top-nav">
-    <a href="#profile">Profile</a>
-    <a href="#news">News</a>
-    <a href="#research">Research</a>
-    <a href="#products">Products</a>
-    <a href="#service">Service</a>
+  <div class="top-nav" id="sticky-nav">
+    <div class="nav-container">
+      <div class="nav-name">Shen Sang</div>
+      <div class="nav-links">
+        <a href="#profile">Profile</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#products">Products</a>
+        <a href="#service">Service</a>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      </div>
+    </div>
   </div>
   <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
@@ -27,27 +39,31 @@
         <table id="profile" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr style="padding:0px">
             <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Shen Sang (桑燊)</name>
-              </p>
-              <p>
-                I am a Senior Research Scientist, with a primary focus on virtual human and GenAI, at the Intelligent Creation Lab, TikTok.
-              </p>
-              <p>
-                I received my master's degree from UC San Diego. I was fortunate to work with <a href="https://cseweb.ucsd.edu/~mkchandraker/">Prof. Manmohan Chandraker</a> at the Visual Computing Center.
-              </p>
-              <p style="text-align:center">
-                <a href="https://github.com/ssangx">Github</a> &nbsp/&nbsp
-                <a href="https://scholar.google.com/citations?user=DkkblQQAAAAJ&hl=en&authuser=4&oi=ao">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/shen-sang-ab6b0217a/">LinkedIn</a>
-              </p>
-              <br>
-              <p>
-                Please feel free to contact me by email: shen.sang[at]bytedance[dot]com
-              </p>
+              <div class="profile-content fade-in">
+                <p style="text-align:center">
+                  <name>Shen Sang (桑燊)</name>
+                </p>
+                <p>
+                  I am a Senior Research Scientist, with a primary focus on virtual human and GenAI, at the Intelligent Creation Lab, TikTok.
+                </p>
+                <p>
+                  I received my master's degree from UC San Diego. I was fortunate to work with <a href="https://cseweb.ucsd.edu/~mkchandraker/">Prof. Manmohan Chandraker</a> at the Visual Computing Center.
+                </p>
+                <div class="social-links">
+                  <a href="https://github.com/ssangx" class="social-icon"><i class="fab fa-github"></i> Github</a>
+                  <a href="https://scholar.google.com/citations?user=DkkblQQAAAAJ&hl=en&authuser=4&oi=ao" class="social-icon"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                  <a href="https://www.linkedin.com/in/shen-sang-ab6b0217a/" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+                <br>
+                <p class="contact-info">
+                  <i class="fas fa-envelope"></i> shen.sang[at]bytedance[dot]com
+                </p>
+              </div>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile3.png" class="hoverZoomLink"></a>
+              <div class="profile-image-container">
+                <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile3.png" class="profile-image">
+              </div>
             </td>
           </tr>
         </tbody></table>
@@ -118,11 +134,13 @@
           </tr>
         </tbody></table>
 
-        <!-- pub list -->
+        <!-- pub list with data attributes for filtering -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2024-arxiv-coap.png' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2024-arxiv-coap.png' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href=https://byteaigc.github.io/coap/>
@@ -150,7 +168,9 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2024-arxiv-idp.png' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2024-arxiv-idp.png' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href=https://byteaigc.github.io/ID-Patch/>
@@ -178,7 +198,9 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2023-arxiv-actors-nerf.gif' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2023-arxiv-actors-nerf.gif' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href=https://jitengmu.github.io/ActorsNeRF/>
@@ -201,7 +223,9 @@
 
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2022-sa-agile-avatar.gif' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2022-sa-agile-avatar.gif' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href=./projects/agileavatar/index.html>
@@ -229,7 +253,9 @@
 
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2021-cvpr-openrooms.png' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2021-cvpr-openrooms.png' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href="https://vilab-ucsd.github.io/ucsd-openrooms/">
@@ -265,7 +291,9 @@
 
           <tr class="pub-item">
             <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/pubs/2020-eccv-neural-relighting.png' width="110%">
+              <div class="publication-image">
+                <img src='images/pubs/2020-eccv-neural-relighting.png' width="110%">
+              </div>
             </td>
             <td style="padding:25px;width:75%;vertical-align:middle">
               <a target="_blank" href="https://cseweb.ucsd.edu/~viscomp/projects/ECCV20NeuralRelighting/">
@@ -296,43 +324,41 @@
         </tbody></table>
 
         <!-- product list -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr class="product-item">
-            <a id="tiktok-ai-moji"></a>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/products/2024-AI-Moji.png' width="110%">
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://www.socialmediatoday.com/news/tiktok-tests-ai-moji-digital-avatars/714522>
-                <papertitle>TikTok AI-Moji, 2024</papertitle>
-              </a>
-            </td>
-          </tr>
-
-          <tr class="product-item">
-            <a id="tiktok-ai-self"></a>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/products/2024-TikTok-AISelf-2.jpg' width="110%">
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://www.tiktok.com/@wavewyld/video/7325186237533310213?lang=en>
-                <papertitle>TikTok AI Self, 2024</papertitle>
-              </a>
-            </td>
-          </tr>
-
-          <tr class="product-item">
-            <a id="tiktok-ai-avatars"></a>
-            <td style="padding:20px;width:30%;vertical-align:middle">
+        <div class="products-grid">
+          <div class="product-card" id="tiktok-ai-moji">
+            <div class="product-image">
+              <img src='images/products/2024-AI-Moji.png'>
+            </div>
+            <div class="product-info">
+              <h3><a href="https://www.socialmediatoday.com/news/tiktok-tests-ai-moji-digital-avatars/714522">TikTok AI-Moji</a></h3>
+              <p class="product-year">2024</p>
+              <p class="product-description">AI-powered emoji avatars that transform user selfies into personalized digital characters.</p>
+            </div>
+          </div>
+          
+          <div class="product-card" id="tiktok-ai-self">
+            <div class="product-image">
+              <img src='images/products/2024-TikTok-AISelf-2.jpg'>
+            </div>
+            <div class="product-info">
+              <h3>TikTok AI Self</h3>
+              <p class="product-year">2024</p>
+              <p class="product-description">AI-powered self-portrait avatars that generate personalized digital characters.</p>
+            </div>
+          </div>
+          
+          <div class="product-card" id="tiktok-ai-avatars">
+            <div class="product-image">
               <div class="video-display">
                 <video id="video-2023aiavatar" muted src="images/products/2023-AI-Avatars.mp4" type="video/mp4" width="110%">
+                </video>
               </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://www.theverge.com/2023/4/25/23698394/tiktok-ai-profile-picture-avatar-lensa>
-                <papertitle>TikTok AI Avatars, 2023</papertitle>
-              </a>
-            </td>
+            </div>
+            <div class="product-info">
+              <h3>TikTok AI Avatars</h3>
+              <p class="product-year">2023</p>
+              <p class="product-description">AI-powered avatar generation that creates personalized digital characters.</p>
+            </div>
             <script>
               const video = document.getElementById("video-2023aiavatar");
               video.addEventListener('mouseenter', () => {
@@ -342,20 +368,19 @@
                 video.controls = false;
               });
             </script>
-          </tr>
-
-          <tr class="product-item">
-            <a id="tiktok-avatars"></a>
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <img src='images/products/2022-TikTok-Avatars.jpg' width="110%">
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://newsroom.tiktok.com/en-us/express-yourself-through-tiktok-avatars>
-                <papertitle>TikTok Avatars, 2022</papertitle>
-              </a>
-            </td>
-          </tr>
-        </tbody></table>
+          </div>
+          
+          <div class="product-card" id="tiktok-avatars">
+            <div class="product-image">
+              <img src='images/products/2022-TikTok-Avatars.jpg'>
+            </div>
+            <div class="product-info">
+              <h3>TikTok Avatars</h3>
+              <p class="product-year">2022</p>
+              <p class="product-description">Customizable digital avatars that represent your personality and style.</p>
+            </div>
+          </div>
+        </div>
 
         <!-- service and paper review -->
         <table id="service" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -374,7 +399,7 @@
           <td style="padding:0px">
             <br>
             <p style="text-align:center;font-size:small;">
-              Credits to this <a target="_blank" href="https://github.com/jonbarron/jonbarron_website">template</a>.
+              Based on <a target="_blank" href="https://github.com/jonbarron/jonbarron_website">Jon Barron's template</a> and enhanced by <a target="_blank" href="https://www.anthropic.com/claude">Claude AI</a>.
             </p>
           </td>
         </tr>
@@ -384,6 +409,65 @@
   </table>
   <div id="back-to-top">↑</div>
   <script>
+    // Dark mode toggle functionality
+    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      const icon = this;
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+    
+    // Check for saved theme preference
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('dark-mode-toggle').classList.remove('fa-moon');
+        document.getElementById('dark-mode-toggle').classList.add('fa-sun');
+      }
+      
+      // Sticky navigation
+      const nav = document.getElementById('sticky-nav');
+      const navTop = nav.offsetTop;
+      
+      function stickyNavigation() {
+        if (window.scrollY >= navTop) {
+          nav.classList.add('sticky');
+        } else {
+          nav.classList.remove('sticky');
+        }
+      }
+      
+      window.addEventListener('scroll', stickyNavigation);
+      
+      // Initialize animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      document.querySelectorAll('.pub-item, .product-card, .fade-in').forEach(item => {
+        observer.observe(item);
+      });
+    });
+    
+    // Existing scripts for video handling, back-to-top, etc.
     document.addEventListener('DOMContentLoaded', function() {
         const videos = document.querySelectorAll('video');
         videos.forEach(video => {
@@ -401,9 +485,9 @@
     
     function scrollFunction() {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            document.getElementById("back-to-top").style.display = "block";
+            document.getElementById("back-to-top").style.opacity = "1";
         } else {
-            document.getElementById("back-to-top").style.display = "none";
+            document.getElementById("back-to-top").style.opacity = "0";
         }
     }
     
@@ -413,6 +497,43 @@
     }
     window.addEventListener('load', function() {
         document.getElementById('loader').style.display = 'none';
+    });
+
+    // Add this to your existing JavaScript in the DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all videos in product cards
+      const videos = document.querySelectorAll('.video-display video');
+      
+      videos.forEach(video => {
+        // Make sure video is muted (required for autoplay)
+        video.muted = true;
+        
+        // Add event listeners to the product card containing the video
+        const productCard = video.closest('.product-card');
+        
+        if (productCard) {
+          // Play video when hovering over the card
+          productCard.addEventListener('mouseenter', () => {
+            video.play();
+            video.controls = true;
+          });
+          
+          // Pause video when mouse leaves the card
+          productCard.addEventListener('mouseleave', () => {
+            video.pause();
+            video.controls = false;
+          });
+          
+          // Also add click handler to toggle play/pause
+          video.addEventListener('click', () => {
+            if (video.paused) {
+              video.play();
+            } else {
+              video.pause();
+            }
+          });
+        }
+      });
     });
   </script>
 </body>
