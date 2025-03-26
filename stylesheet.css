@@ -204,15 +204,22 @@ a:hover papertitle {
 
 /* Publications */
 .pub-item {
-  transition: transform 0.3s, opacity 0.5s;
+  transition: transform 0.3s, opacity 0.5s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(15px);
   margin-bottom: 25px;
+  border-radius: 8px;
 }
 
 .pub-item.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.pub-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--shadow-color);
+  background-color: var(--card-bg);
 }
 
 .pub-item td {
