@@ -178,23 +178,7 @@ body.dark-mode .top-nav {
   border-radius: 6px;
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  bottom: 3px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-  border-radius: 2px;
-}
-
-.nav-links a:hover::after { transform: scaleX(1); }
 .nav-links a.active { color: var(--primary-color); }
-.nav-links a.active::after { transform: scaleX(1); }
 
 .theme-toggle {
   cursor: pointer;
@@ -213,6 +197,11 @@ name {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.name-chinese {
+  font-size: 0.65em;
+  margin-left: 6px;
 }
 
 heading {
