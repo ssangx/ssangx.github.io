@@ -1,26 +1,27 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<head>
+  <meta charset="UTF-8">
   <title>Shen Sang</title>
 
   <meta name="author" content="Shen Sang">
+  <meta name="description" content="Shen Sang">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="KWYLDUPbMWc0kQb2gP0dx5MmcOOUWG_3Y1IoFVITOME" />
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ssangx.github.io/">
+
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
   <div id="scroll-progress"></div>
-  <div id="loader"><div class="spinner"></div></div>
-  <div class="top-nav" id="sticky-nav">
+
+  <nav class="top-nav" id="sticky-nav" aria-label="Main navigation">
     <div class="nav-container">
-      <div class="nav-name">Shen Sang</div>
+      <a class="nav-name" href="#profile">Shen Sang</a>
       <div class="nav-links">
         <a href="#profile">Profile</a>
         <a href="#news">News</a>
@@ -28,611 +29,455 @@
         <a href="#products">Products</a>
         <a href="#service">Service</a>
       </div>
-      <div class="theme-toggle">
-        <i class="fas fa-moon" id="dark-mode-toggle"></i>
-      </div>
+      <button class="theme-toggle" id="dark-mode-toggle" type="button" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
-  </div>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;margin-top:-20px;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <!-- prfile -->
-        <table id="profile" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <div class="profile-content fade-in">
-                <p style="text-align:center">
-                  <name><span class="name-english">Shen Sang</span><span class="name-chinese"> 桑燊</span></name>
-                </p>
-                <p>
-                  I am a Senior Research Scientist, with a primary focus on GenAI, at the Intelligent Creation Team, TikTok.
-                </p>
-                <p>
-                  I received my master's degree from UC San Diego. I was fortunate to work with <a href="https://cseweb.ucsd.edu/~mkchandraker/">Prof. Manmohan Chandraker</a> at the Visual Computing Center.
-                </p>
-                <div class="social-links">
-                  <a href="https://github.com/ssangx" class="social-icon"><i class="fab fa-github"></i> Github</a>
-                  <a href="https://scholar.google.com/citations?user=DkkblQQAAAAJ&hl=en&authuser=4&oi=ao" class="social-icon"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                  <a href="https://www.linkedin.com/in/shen-sang-ab6b0217a/" class="social-icon"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-                <br>
-                <p class="contact-info">
-                  <i class="fas fa-envelope"></i> shen.sang[at]bytedance[dot]com
-                </p>
-              </div>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <div class="profile-image-container">
-                <img style="width:100%;max-width:100%" alt="profile photo" src="images/profile3.png" class="profile-image">
-              </div>
-            </td>
-          </tr>
-        </tbody></table>
+  </nav>
 
-        <!-- news -->
-        <table id="news" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><b>News</b></heading>
-              <!-- Recent news always visible -->
-              <div class="timeline">
-                <p>
-                    [2026.02] &#x2728  <a href="https://byteaigc.github.io/Lynx/"> Lynx</a> is accepted to CVPR 2026. 
-                  </p>
-                <p>
-                  [2025.09] <a href="https://byteaigc.github.io/Lynx/"> Lynx</a> is released, feel free to try our latest personalized video generation model! 
-                </p>
+  <main class="container">
 
-                <p>
-                  [2025.02] <a href="https://byteaigc.github.io/coap/"> COAP</a> and <a href="https://byteaigc.github.io/ID-Patch/"> ID-Patch</a> are accepted to CVPR 2025. 
-                </p>
+    <!-- profile -->
+    <section id="profile" class="profile fade-in">
+      <div class="profile-text">
+        <h1 class="name"><span class="name-english">Shen Sang</span><span class="name-chinese">桑燊</span></h1>
+        <p class="profile-role">Research Scientist · <a href="https://www.cantina.com" target="_blank" rel="noopener">Cantina</a></p>
+        <p>
+          I am a Research Scientist at <a href="https://www.cantina.com" target="_blank" rel="noopener">Cantina</a>, where I work on generative foundation models.
+          Before that, I was a Senior Research Scientist, focusing on generative AI, at the Intelligent Creation team at ByteDance / TikTok.
+        </p>
+        <p>
+          I received my master's degree from UC San Diego, where I was fortunate to work with <a href="https://cseweb.ucsd.edu/~mkchandraker/" target="_blank" rel="noopener">Prof. Manmohan Chandraker</a> at the Visual Computing Center.
+        </p>
+        <div class="social-links">
+          <a href="https://github.com/ssangx" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://scholar.google.com/citations?user=DkkblQQAAAAJ&hl=en&authuser=4&oi=ao" class="social-icon" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+          <a href="https://www.linkedin.com/in/shen-sang-ab6b0217a/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p class="contact-info">
+          <i class="fas fa-envelope"></i> shen[at]cantina[dot]ai
+        </p>
+      </div>
+      <div class="profile-photo">
+        <div class="profile-image-container">
+          <img alt="Portrait of Shen Sang" src="images/profile3.png" class="profile-image">
+        </div>
+      </div>
+    </section>
 
-                <!-- Older news hidden by default -->
-                <div id="older-news" style="display: none;">
-                  <p>
-                    [2024.02] <a href="#tiktok-ai-self"> TikTok AI Self</a> has been launched and is available globally.
-                  </p>
-                  <p>
-                    [2023.07] <a target="_blank" href="https://jitengmu.github.io/ActorsNeRF">ActorsNeRF</a> is accepted to ICCV 2023.
-                  </p>
-                  <p>
-                    [2023.05] <a href="#tiktok-ai-avatars">TikTok AI Avatars</a> is launched globally.
-                  </p>
-                  <p>
-                    [2022.08] <a target="_blank" href="./projects/agileavatar/index.html">AgileAvatar</a> is accepted to SIGGRAPH Asia 2022.
-                  </p>
-                  <p>
-                    [2022.06] <a href="#tiktok-avatars">TikTok Avatars</a> is launched globally.
-                  </p>
-                </div>
-              </div>
-              
-              <!-- Toggle button -->
-              <p>
-                <a href="javascript:void(0);" id="news-toggle" style="color: #777; text-decoration: none; cursor: pointer;">
-                  <span id="toggle-text">Show More ▼</span>
-                </a>
-              </p>
-              
-              <script>
-                document.getElementById('news-toggle').addEventListener('click', function() {
-                  const olderNews = document.getElementById('older-news');
-                  const toggleText = document.getElementById('toggle-text');
-                  
-                  if (olderNews.style.display === 'none') {
-                    olderNews.style.display = 'block';
-                    toggleText.innerHTML = 'Hide ▲';
-                  } else {
-                    olderNews.style.display = 'none';
-                    toggleText.innerHTML = 'Show More ▼';
-                  }
-                });
-              </script>
-            </td>
-          </tr>
-        </tbody></table>
+    <!-- news -->
+    <section id="news" class="section">
+      <h2 class="section-title">News</h2>
+      <div class="timeline">
+        <p><span class="news-date">2026.09</span> &#x2728; I joined <a href="https://www.cantina.com" target="_blank" rel="noopener">Cantina</a> as a Research Scientist, working on generative foundation models.</p>
+        <p><span class="news-date">2026.02</span> <a href="https://byteaigc.github.io/Lynx/" target="_blank" rel="noopener">Lynx</a> is accepted to CVPR 2026.</p>
+        <p><span class="news-date">2025.09</span> <a href="https://byteaigc.github.io/Lynx/" target="_blank" rel="noopener">Lynx</a> is released, feel free to try our latest personalized video generation model!</p>
+        <p><span class="news-date">2025.02</span> <a href="https://byteaigc.github.io/coap/" target="_blank" rel="noopener">COAP</a> and <a href="https://byteaigc.github.io/ID-Patch/" target="_blank" rel="noopener">ID-Patch</a> are accepted to CVPR 2025.</p>
 
-        <!-- research title -->
-        <table id="research" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><b>Research</b></heading>
-              <p>
-                I currently work on world models, video generation, and editing, with a focus on building generative models that understand and synthesize dynamic visual content. Over the past few years, I have worked extensively on personalized image and video generation, while also exploring efficient training and inference methods. Prior to this, my research focused on 3D vision and graphics, particularly in areas such as 3D reconstruction and neural relighting.
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+        <!-- Older news hidden by default -->
+        <div id="older-news" hidden>
+          <p><span class="news-date">2024.02</span> <a href="#tiktok-ai-self">TikTok AI Self</a> has been launched and is available globally.</p>
+          <p><span class="news-date">2023.07</span> <a target="_blank" rel="noopener" href="https://jitengmu.github.io/ActorsNeRF">ActorsNeRF</a> is accepted to ICCV 2023.</p>
+          <p><span class="news-date">2023.05</span> <a href="#tiktok-ai-avatars">TikTok AI Avatars</a> is launched globally.</p>
+          <p><span class="news-date">2022.08</span> <a target="_blank" rel="noopener" href="./projects/agileavatar/index.html">AgileAvatar</a> is accepted to SIGGRAPH Asia 2022.</p>
+          <p><span class="news-date">2022.06</span> <a href="#tiktok-avatars">TikTok Avatars</a> is launched globally.</p>
+        </div>
+      </div>
+      <button type="button" class="news-toggle" id="news-toggle" aria-expanded="false" aria-controls="older-news">
+        <span id="toggle-text">Show more</span> <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </button>
+    </section>
 
-        <!-- pub list with data attributes for filtering -->
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr class="pub-item">
-          <td style="padding:20px;width:30%;vertical-align:middle">
-            <div class="publication-image">
-              <img src='images/pubs/2025-arxiv-vap.webp' width="110%">
-            </div>
-          </td>
-          <td style="padding:25px;width:75%;vertical-align:middle">
-            <a target="_blank" href=https://bytedance.github.io/Video-As-Prompt/>
-              <papertitle>&#x2728 Video-As-Prompt: Unified Semantic Control for Video Generation</papertitle>
+    <!-- research -->
+    <section id="research" class="section">
+      <h2 class="section-title">Research</h2>
+      <p>
+        I currently work on video foundation models, with a focus on building generative models that understand and synthesize dynamic visual content, including world models, video generation, and editing. Over the past few years, I have worked extensively on personalized image and video generation, while also exploring efficient training and inference methods. Prior to this, my research focused on 3D vision and graphics, particularly in areas such as 3D reconstruction and neural relighting.
+      </p>
+
+      <ul class="pub-list">
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2025-arxiv-vap.webp" alt="Video-As-Prompt teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://bytedance.github.io/Video-As-Prompt/" class="pub-title-link">
+              <span class="paper-title">&#x2728; Video-As-Prompt: Unified Semantic Control for Video Generation</span>
             </a>
-            <br>
-              <a target="_blank" href="https://yxbian23.github.io/">Yuxuan Bian</a>,
-              <a target="_blank" href="https://chenxin.tech/">Xin Chen</a>,
-              <a target="_blank" href="https://scholar.google.com/citations?user=WTF_Qf0AAAAJ&hl=en">Zenan Li</a>,
-              <a target="_blank" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>,
+            <div class="pub-authors">
+              <a target="_blank" rel="noopener" href="https://yxbian23.github.io/">Yuxuan Bian</a>,
+              <a target="_blank" rel="noopener" href="https://chenxin.tech/">Xin Chen</a>,
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=WTF_Qf0AAAAJ&hl=en">Zenan Li</a>,
+              <a target="_blank" rel="noopener" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>,
               <strong>Shen Sang</strong>,
-              <a target="_blank" href="https://linjieluo.github.io/">Linjie Luo</a>,
-              <a target="_blank" href="https://scholar.google.com/citations?user=eSiKPqUAAAAJ&hl=en">Qiang Xu</a>
-            <br>
-            <br>
-              <em>ICLR</em>, 2026
-            <br>
-            [<a target="_blank" href="https://bytedance.github.io/Video-As-Prompt/">project</a>]
-            [<a target="_blank" href="https://www.arxiv.org/abs/2510.20888">arXiv</a>]
-            [<a target="_blank" href="https://github.com/bytedance/Video-As-Prompt">code</a>]
-          </td>
-        </tr>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr class="pub-item">
-          <td style="padding:20px;width:30%;vertical-align:middle">
-            <div class="publication-image">
-              <img src='images/pubs/2025-arxiv-lynx.webp' width="110%">
+              <a target="_blank" rel="noopener" href="https://linjieluo.github.io/">Linjie Luo</a>,
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=eSiKPqUAAAAJ&hl=en">Qiang Xu</a>
             </div>
-          </td>
-          <td style="padding:25px;width:75%;vertical-align:middle">
-            <a target="_blank" href=https://byteaigc.github.io/Lynx/>
-              <papertitle>&#x2728 Lynx: Towards High-Fidelity Personalized Video Generation</papertitle>
+            <div class="pub-venue"><em>ICLR</em> 2026</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://bytedance.github.io/Video-As-Prompt/">project</a>
+              <a target="_blank" rel="noopener" href="https://www.arxiv.org/abs/2510.20888">arXiv</a>
+              <a target="_blank" rel="noopener" href="https://github.com/bytedance/Video-As-Prompt">code</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2025-arxiv-lynx.webp" alt="Lynx teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://byteaigc.github.io/Lynx/" class="pub-title-link">
+              <span class="paper-title">&#x2728; Lynx: Towards High-Fidelity Personalized Video Generation</span>
             </a>
-            <br>
+            <div class="pub-authors">
               <strong>Shen Sang*</strong>,
-              <a target="_blank" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi*</a>, 
-              <a target="_blank" href="https://gutianpei.github.io/">Tianpei Gu</a>, 
-              <a target="_blank" href="https://www.jingliu.net/">Jing Liu</a>, 
-              <a target="_blank" href="https://linjieluo.github.io/">Linjie Luo</a>
-            <br>
-            <br>
-              <em>CVPR</em>, 2026
-            <br>
-            [<a target="_blank" href="https://byteaigc.github.io/Lynx/">project</a>]
-            [<a target="_blank" href="https://arxiv.org/abs/2509.15496">arXiv</a>]
-            [<a target="_blank" href="https://github.com/bytedance/lynx">code</a>]
-          </td>
-        </tr>
-        
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2025-cvpr-coap-2.png' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://byteaigc.github.io/coap/>
-                <papertitle>COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection</papertitle>
-              </a>
-              <br>
-                <a target="_blank" href="https://scholar.google.com/citations?user=ITSm2LYAAAAJ&hl=en">Jinqi Xiao</a>, 
-                <strong>Shen Sang</strong>,
-                <a target="_blank" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>, 
-                <a target="_blank" href="https://www.jingliu.net/">Jing Liu</a>, 
-                <a target="_blank" href="https://scholar.google.com/citations?user=0TIYjPAAAAAJ&hl=en">Qing Yan</a>, 
-                <a target="_blank" href="https://sites.google.com/view/yuqianzhang">Yuqian Zhang</a>, 
-                <a target="_blank" href="https://linjieluo.github.io/">Linjie Luo</a>, 
-                <a target="_blank" href="https://sites.google.com/site/boyuaneecs">Bo Yuan</a>
-              <br>
-              <br>
-                <em>CVPR</em>, 2025
-              <br>
-              [<a target="_blank" href="https://byteaigc.github.io/coap/">project</a>]
-              [<a target="_blank" href="https://arxiv.org/abs/2412.00071">arXiv</a>]
-              [<a target="_blank" href="https://github.com/bytedance/coap">code</a>]
-            </td>
-          </tr>
-  
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2025-cvpr-idp.png' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://byteaigc.github.io/ID-Patch/>
-                <papertitle>ID-Patch: Robust ID Association for Group Photo Personalization</papertitle>
-              </a>
-              <br>
-                <a target="_blank" href="https://damon-demon.github.io/">Yimeng Zhang</a>, 
-                <a target="_blank" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>, 
-                <a target="_blank" href="https://www.jingliu.net/">Jing Liu</a>, 
-                <strong>Shen Sang</strong>,
-                <a target="_blank" href="https://liming-jiang.com/">Liming Jiang</a>, 
-                <a target="_blank" href="https://scholar.google.com/citations?user=0TIYjPAAAAAJ&hl=en">Qing Yan</a>, 
-                <a target="_blank" href="https://lsjxjtu.github.io/">Sijia Liu</a>, 
-                <a target="_blank" href="https://linjieluo.github.io/">Linjie Luo</a>
-              <br>
-              <br>
-                <em>CVPR</em>, 2025
-              <br>
-              [<a target="_blank" href="https://byteaigc.github.io/ID-Patch/">project</a>]
-              [<a target="_blank" href="https://arxiv.org/abs/2411.13632">arXiv</a>]
-              [<a target="_blank" href="https://github.com/bytedance/ID-Patch">code</a>]
-            </td>
-          </tr>
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2023-arxiv-actors-nerf.gif' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=https://jitengmu.github.io/ActorsNeRF/>
-                <papertitle>ActorsNeRF: Animatable Few-shot Human Rendering with Generalizable NeRFs</papertitle>
-              </a>
-              <br>
-                <a target="_blank" href="https://jitengmu.github.io/">Jiteng Mu</a>, 
-                <strong>Shen Sang</strong>,
-                <a target="_blank" href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>, 
-                <a target="_blank" href="https://xiaolonw.github.io/">Xiaolong Wang</a>
-              <br>
-              <br>
-                <em>ICCV</em>, 2023
-              <br>
-              [<a target="_blank" href="https://jitengmu.github.io/ActorsNeRF/">project</a>]
-              [<a target="_blank" href="https://arxiv.org/abs/2304.14401">arXiv</a>]
-              [<a target="_blank" href="https://github.com/JitengMu/ActorsNeRF">code</a>]
-            </td>
-          </tr>
-
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2022-sa-agile-avatar.gif' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href=./projects/agileavatar/index.html>
-                <papertitle>AgileAvatar: Stylized 3D Avatar Creation via Cascaded Domain Bridging</papertitle>
-              </a>
-              <br>
-                <strong>Shen Sang</strong>,
-                <a target="_blank" href="https://tiancheng-zhi.github.io">Tiancheng Zhi</a>, 
-                <a target="_blank" href="https://guoxiansong.github.io/homepage/index.html">Guoxian Song</a>, 
-                Minghao Liu,
-                Chunpong Lai,
-                <a target="_blank" href="https://www.jingliu.net/">Jing Liu</a>,
-                Xiang Wen,
-                <a target="_blank" href="https://users.soe.ucsc.edu/~davis/">James Davis</a>,
-                <a target="_blank" href="https://linjieluo.github.io/">Linjie Luo</a>
-              <br>
-              <br>
-                <em>SIGGRAPH Asia</em>, 2022
-              <br>
-              [<a target="_blank" href="https://ssangx.github.io/projects/agileavatar/index.html">project</a>]
-              [<a target="_blank" href="pubs/2022-SIGGRAPHAsia-AgileAvatar.pdf">paper</a>]
-              [<a target="_blank" href="https://arxiv.org/abs/2211.07818">arXiv</a>]
-              [<a target="_blank" href="data/Sang2022AgileAvatar.bib">bibtex</a>]
-            </td>
-          </tr>
-
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2021-cvpr-openrooms.png' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href="https://vilab-ucsd.github.io/ucsd-openrooms/">
-                <papertitle>OpenRooms: An Open Framework for Photorealistic Indoor Scene Datasets</papertitle>
-              </a>
-              <br>
-                <a target="_blank" href="https://sites.google.com/view/zhengqinli">Zhengqin Li</a>, 
-                Ting-Wei Yu, 
-                <strong>Shen Sang</strong>, 
-                Sarah Wang, 
-                <a target="_blank" href="https://sites.google.com/site/mengsong1130/">Meng Song</a>, 
-                Yuhan Liu, 
-                <a target="_blank" href="https://yuyingyeh.github.io/"> Yu-Ying Yeh</a>, 
-                <a target="_blank" href="https://jerrypiglet.github.io/">Rui Zhu</a>, 
-                <a target="_blank" href="https://scholar.google.com/citations?user=v19p_0oAAAAJ&hl=en">Nitesh Gundavarapu</a>, 
-                Jia Shi, 
-                <a target="_blank" href="https://sai-bi.github.io/">Sai Bi</a>, 
-                <a target="_blank" href="https://cseweb.ucsd.edu/~zex014/">Zexiang Xu</a>, 
-                <a target="_blank" href="https://kovenyu.com/">Hong-Xing Yu</a>, 
-                <a target="_blank" href="http://www.kalyans.org/">Kalyan Sunkavalli</a>, 
-                <a target="_blank" href="http://www.miloshasan.net/">Miloš Hašan</a>, 
-                <a target="_blank" href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>,
-                <a target="_blank" href="https://cseweb.ucsd.edu/~mkchandraker/">Manmohan Chandraker</a>
-              <br>
-              <br>
-                <em>CVPR</em>, 2021 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-              <br>
-              [<a target="_blank" href="https://vilab-ucsd.github.io/ucsd-openrooms/">project</a>]
-              [<a target="_blank" href="https://arxiv.org/pdf/2007.12868.pdf">paper</a>]
-              [<a target="_blank" href="https://github.com/ViLab-UCSD/OpenRooms?tab=readme-ov-file">dataset</a>]
-            </td>
-          </tr>
-
-          <tr class="pub-item">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <div class="publication-image">
-                <img src='images/pubs/2020-eccv-neural-relighting.png' width="110%">
-              </div>
-            </td>
-            <td style="padding:25px;width:75%;vertical-align:middle">
-              <a target="_blank" href="https://cseweb.ucsd.edu/~viscomp/projects/ECCV20NeuralRelighting/">
-                <papertitle>Single-Shot Neural Relighting and SVBRDF Estimation</papertitle>
-              </a>
-              <br>
-              <strong>Shen Sang</strong>, 
-              <a target="_blank" href="https://cseweb.ucsd.edu/~mkchandraker/">Manmohan Chandraker</a>
-              <br>
-              <br>
-                <em>ECCV</em>, 2020
-              <br>
-              [<a target="_blank" href="https://cseweb.ucsd.edu/~viscomp/projects/ECCV20NeuralRelighting/">project</a>]
-              [<a target="_blank" href="pubs/2020-ECCV-NeuralRelighting.pdf">paper</a>]
-              [<a target="_blank" href="https://github.com/ssangx/NeuralRelighting">code</a>]
-              [<a target="_blank" href="data/sang2020single.bib">bibtex</a>]
-            </td>
-          </tr>
-        </tbody></table>
-
-        <!-- production title -->
-        <table id="products" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><b>Products</b></heading>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <!-- product list -->
-        <div class="products-grid">
-          <div class="product-card" id="tiktok-ai-moji">
-            <div class="product-image">
-              <img src='images/products/2024-AI-Moji.png'>
+              <a target="_blank" rel="noopener" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi*</a>,
+              <a target="_blank" rel="noopener" href="https://gutianpei.github.io/">Tianpei Gu</a>,
+              <a target="_blank" rel="noopener" href="https://www.jingliu.net/">Jing Liu</a>,
+              <a target="_blank" rel="noopener" href="https://linjieluo.github.io/">Linjie Luo</a>
             </div>
-            <div class="product-info">
-              <h3>TikTok AI-Moji</h3>
-              <p class="product-year">2024</p>
-              <p class="product-description">AI-powered emoji avatars that transform user selfies into expressive digital characters.</p>
+            <div class="pub-venue"><em>CVPR</em> 2026</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://byteaigc.github.io/Lynx/">project</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2509.15496">arXiv</a>
+              <a target="_blank" rel="noopener" href="https://github.com/bytedance/lynx">code</a>
             </div>
           </div>
-          
-          <div class="product-card" id="tiktok-ai-self">
-            <div class="product-image">
-              <img src='images/products/2024-TikTok-AISelf-2.jpg'>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2025-cvpr-coap-2.png" alt="COAP teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://byteaigc.github.io/coap/" class="pub-title-link">
+              <span class="paper-title">COAP: Memory-Efficient Training with Correlation-Aware Gradient Projection</span>
+            </a>
+            <div class="pub-authors">
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=ITSm2LYAAAAJ&hl=en">Jinqi Xiao</a>,
+              <strong>Shen Sang</strong>,
+              <a target="_blank" rel="noopener" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>,
+              <a target="_blank" rel="noopener" href="https://www.jingliu.net/">Jing Liu</a>,
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=0TIYjPAAAAAJ&hl=en">Qing Yan</a>,
+              <a target="_blank" rel="noopener" href="https://sites.google.com/view/yuqianzhang">Yuqian Zhang</a>,
+              <a target="_blank" rel="noopener" href="https://linjieluo.github.io/">Linjie Luo</a>,
+              <a target="_blank" rel="noopener" href="https://sites.google.com/site/boyuaneecs">Bo Yuan</a>
             </div>
-            <div class="product-info">
-              <h3>TikTok AI Self</h3>
-              <p class="product-year">2024</p>
-              <p class="product-description">AI-powered self-portrait avatars that generate photorealistic digital characters.</p>
+            <div class="pub-venue"><em>CVPR</em> 2025</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://byteaigc.github.io/coap/">project</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2412.00071">arXiv</a>
+              <a target="_blank" rel="noopener" href="https://github.com/bytedance/coap">code</a>
             </div>
           </div>
-          
-          <div class="product-card" id="tiktok-ai-avatars">
-            <div class="product-image">
-              <div class="video-display">
-                <video id="video-2023aiavatar" muted src="images/products/2023-AI-Avatars.mp4" type="video/mp4" width="110%">
-                </video>
-              </div>
-            </div>
-            <div class="product-info">
-              <h3>TikTok AI Avatars</h3>
-              <p class="product-year">2023</p>
-              <p class="product-description">AI-powered avatar generation that creates stylized digital characters.</p>
-            </div>
-            <script>
-              const video = document.getElementById("video-2023aiavatar");
-              video.addEventListener('mouseenter', () => {
-                video.controls = true;
-              });
-              video.addEventListener('mouseleave', () => {
-                video.controls = false;
-              });
-            </script>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2025-cvpr-idp.png" alt="ID-Patch teaser" loading="lazy">
           </div>
-          
-          <div class="product-card" id="tiktok-avatars">
-            <div class="product-image">
-              <img src='images/products/2022-TikTok-Avatars.jpg'>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://byteaigc.github.io/ID-Patch/" class="pub-title-link">
+              <span class="paper-title">ID-Patch: Robust ID Association for Group Photo Personalization</span>
+            </a>
+            <div class="pub-authors">
+              <a target="_blank" rel="noopener" href="https://damon-demon.github.io/">Yimeng Zhang</a>,
+              <a target="_blank" rel="noopener" href="https://tiancheng-zhi.github.io/">Tiancheng Zhi</a>,
+              <a target="_blank" rel="noopener" href="https://www.jingliu.net/">Jing Liu</a>,
+              <strong>Shen Sang</strong>,
+              <a target="_blank" rel="noopener" href="https://liming-jiang.com/">Liming Jiang</a>,
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=0TIYjPAAAAAJ&hl=en">Qing Yan</a>,
+              <a target="_blank" rel="noopener" href="https://lsjxjtu.github.io/">Sijia Liu</a>,
+              <a target="_blank" rel="noopener" href="https://linjieluo.github.io/">Linjie Luo</a>
             </div>
-            <div class="product-info">
-              <h3><a href="https://newsroom.tiktok.com/en-us/express-yourself-through-tiktok-avatars">TikTok Avatars</a></h3>
-              <p class="product-year">2022</p>
-              <p class="product-description">Customizable digital avatars that represent your personality and style.</p>
+            <div class="pub-venue"><em>CVPR</em> 2025</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://byteaigc.github.io/ID-Patch/">project</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2411.13632">arXiv</a>
+              <a target="_blank" rel="noopener" href="https://github.com/bytedance/ID-Patch">code</a>
             </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2023-arxiv-actors-nerf.gif" alt="ActorsNeRF teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://jitengmu.github.io/ActorsNeRF/" class="pub-title-link">
+              <span class="paper-title">ActorsNeRF: Animatable Few-shot Human Rendering with Generalizable NeRFs</span>
+            </a>
+            <div class="pub-authors">
+              <a target="_blank" rel="noopener" href="https://jitengmu.github.io/">Jiteng Mu</a>,
+              <strong>Shen Sang</strong>,
+              <a target="_blank" rel="noopener" href="http://www.svcl.ucsd.edu/~nuno/">Nuno Vasconcelos</a>,
+              <a target="_blank" rel="noopener" href="https://xiaolonw.github.io/">Xiaolong Wang</a>
+            </div>
+            <div class="pub-venue"><em>ICCV</em> 2023</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://jitengmu.github.io/ActorsNeRF/">project</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.14401">arXiv</a>
+              <a target="_blank" rel="noopener" href="https://github.com/JitengMu/ActorsNeRF">code</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2022-sa-agile-avatar.gif" alt="AgileAvatar teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="./projects/agileavatar/index.html" class="pub-title-link">
+              <span class="paper-title">AgileAvatar: Stylized 3D Avatar Creation via Cascaded Domain Bridging</span>
+            </a>
+            <div class="pub-authors">
+              <strong>Shen Sang</strong>,
+              <a target="_blank" rel="noopener" href="https://tiancheng-zhi.github.io">Tiancheng Zhi</a>,
+              <a target="_blank" rel="noopener" href="https://guoxiansong.github.io/homepage/index.html">Guoxian Song</a>,
+              Minghao Liu,
+              Chunpong Lai,
+              <a target="_blank" rel="noopener" href="https://www.jingliu.net/">Jing Liu</a>,
+              Xiang Wen,
+              <a target="_blank" rel="noopener" href="https://users.soe.ucsc.edu/~davis/">James Davis</a>,
+              <a target="_blank" rel="noopener" href="https://linjieluo.github.io/">Linjie Luo</a>
+            </div>
+            <div class="pub-venue"><em>SIGGRAPH Asia</em> 2022</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://ssangx.github.io/projects/agileavatar/index.html">project</a>
+              <a target="_blank" rel="noopener" href="pubs/2022-SIGGRAPHAsia-AgileAvatar.pdf">paper</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2211.07818">arXiv</a>
+              <a target="_blank" rel="noopener" href="data/Sang2022AgileAvatar.bib">bibtex</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2021-cvpr-openrooms.png" alt="OpenRooms teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://vilab-ucsd.github.io/ucsd-openrooms/" class="pub-title-link">
+              <span class="paper-title">OpenRooms: An Open Framework for Photorealistic Indoor Scene Datasets</span>
+            </a>
+            <div class="pub-authors">
+              <a target="_blank" rel="noopener" href="https://sites.google.com/view/zhengqinli">Zhengqin Li</a>,
+              Ting-Wei Yu,
+              <strong>Shen Sang</strong>,
+              Sarah Wang,
+              <a target="_blank" rel="noopener" href="https://sites.google.com/site/mengsong1130/">Meng Song</a>,
+              Yuhan Liu,
+              <a target="_blank" rel="noopener" href="https://yuyingyeh.github.io/">Yu-Ying Yeh</a>,
+              <a target="_blank" rel="noopener" href="https://jerrypiglet.github.io/">Rui Zhu</a>,
+              <a target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=v19p_0oAAAAJ&hl=en">Nitesh Gundavarapu</a>,
+              Jia Shi,
+              <a target="_blank" rel="noopener" href="https://sai-bi.github.io/">Sai Bi</a>,
+              <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~zex014/">Zexiang Xu</a>,
+              <a target="_blank" rel="noopener" href="https://kovenyu.com/">Hong-Xing Yu</a>,
+              <a target="_blank" rel="noopener" href="http://www.kalyans.org/">Kalyan Sunkavalli</a>,
+              <a target="_blank" rel="noopener" href="http://www.miloshasan.net/">Miloš Hašan</a>,
+              <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>,
+              <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~mkchandraker/">Manmohan Chandraker</a>
+            </div>
+            <div class="pub-venue"><em>CVPR</em> 2021 <span class="pub-award">Oral</span></div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://vilab-ucsd.github.io/ucsd-openrooms/">project</a>
+              <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2007.12868.pdf">paper</a>
+              <a target="_blank" rel="noopener" href="https://github.com/ViLab-UCSD/OpenRooms?tab=readme-ov-file">dataset</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="pub-item">
+          <div class="pub-thumb">
+            <img src="images/pubs/2020-eccv-neural-relighting.png" alt="Neural Relighting teaser" loading="lazy">
+          </div>
+          <div class="pub-body">
+            <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~viscomp/projects/ECCV20NeuralRelighting/" class="pub-title-link">
+              <span class="paper-title">Single-Shot Neural Relighting and SVBRDF Estimation</span>
+            </a>
+            <div class="pub-authors">
+              <strong>Shen Sang</strong>,
+              <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~mkchandraker/">Manmohan Chandraker</a>
+            </div>
+            <div class="pub-venue"><em>ECCV</em> 2020</div>
+            <div class="pub-links">
+              <a target="_blank" rel="noopener" href="https://cseweb.ucsd.edu/~viscomp/projects/ECCV20NeuralRelighting/">project</a>
+              <a target="_blank" rel="noopener" href="pubs/2020-ECCV-NeuralRelighting.pdf">paper</a>
+              <a target="_blank" rel="noopener" href="https://github.com/ssangx/NeuralRelighting">code</a>
+              <a target="_blank" rel="noopener" href="data/sang2020single.bib">bibtex</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- products -->
+    <section id="products" class="section">
+      <h2 class="section-title">Products</h2>
+
+      <div class="products-grid">
+        <div class="product-card" id="tiktok-ai-moji">
+          <div class="product-image">
+            <img src="images/products/2024-AI-Moji.png" alt="TikTok AI-Moji" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3>TikTok AI-Moji</h3>
+            <p class="product-year">2024</p>
+            <p class="product-description">AI-powered emoji avatars that transform user selfies into expressive digital characters.</p>
           </div>
         </div>
 
-        <!-- service and paper review -->
-        <table id="service" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading><b>Service</b></heading>
-              <p>
-                CVPR (2023-2025), ICCV (2023), ICLR (2023), AAAI (2023-2024), SIGGRAPH (2025), SIGGRAPH Asia (2023), TMM, C&G
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
+        <div class="product-card" id="tiktok-ai-self">
+          <div class="product-image">
+            <img src="images/products/2024-TikTok-AISelf-2.jpg" alt="TikTok AI Self" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3>TikTok AI Self</h3>
+            <p class="product-year">2024</p>
+            <p class="product-description">AI-powered self-portrait avatars that generate photorealistic digital characters.</p>
+          </div>
+        </div>
 
-        <!-- credit -->
-        <tr>
-          <td style="padding:0px">
-            <br>
-            <p style="text-align:center;font-size:small;">
-              Based on <a target="_blank" href="https://github.com/jonbarron/jonbarron_website">Jon Barron's template</a> and enhanced by OpenAI Codex.
-            </p>
-          </td>
-        </tr>
+        <div class="product-card" id="tiktok-ai-avatars">
+          <div class="product-image">
+            <div class="video-display">
+              <video id="video-2023aiavatar" muted playsinline preload="metadata" src="images/products/2023-AI-Avatars.mp4"></video>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>TikTok AI Avatars</h3>
+            <p class="product-year">2023</p>
+            <p class="product-description">AI-powered avatar generation that creates stylized digital characters.</p>
+          </div>
+        </div>
 
-      </td>
-    </tr>
-  </table>
-  <div id="back-to-top">↑</div>
+        <div class="product-card" id="tiktok-avatars">
+          <div class="product-image">
+            <img src="images/products/2022-TikTok-Avatars.jpg" alt="TikTok Avatars" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3><a href="https://newsroom.tiktok.com/en-us/express-yourself-through-tiktok-avatars" target="_blank" rel="noopener">TikTok Avatars</a></h3>
+            <p class="product-year">2022</p>
+            <p class="product-description">Customizable digital avatars that represent your personality and style.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service -->
+    <section id="service" class="section">
+      <h2 class="section-title">Service</h2>
+      <p class="service-list">
+        <span class="service-label">Reviewer:</span>
+        CVPR (2023–2025), ICCV (2023), ICLR (2023), AAAI (2023–2024), SIGGRAPH (2025), SIGGRAPH Asia (2023), TMM, C&amp;G
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <p>Based on <a target="_blank" rel="noopener" href="https://github.com/jonbarron/jonbarron_website">Jon Barron's template</a>, enhanced with Codex and Cursor.</p>
+      <p class="last-updated">Last updated: <time datetime="2026-09-03">September 2026</time></p>
+    </footer>
+
+  </main>
+
+  <button id="back-to-top" type="button" aria-label="Back to top">↑</button>
+
   <script>
-    // Dark mode toggle functionality
-    document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-      document.body.classList.toggle('dark-mode');
-      const icon = this;
-      if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        localStorage.setItem('theme', 'light');
-      }
-    });
-    
-    // Check for saved theme preference
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        document.body.classList.add('dark-mode');
-        document.getElementById('dark-mode-toggle').classList.remove('fa-moon');
-        document.getElementById('dark-mode-toggle').classList.add('fa-sun');
-      }
-      
-      // Sticky navigation
-      const nav = document.getElementById('sticky-nav');
-      const navTop = nav.offsetTop;
-      
-      function stickyNavigation() {
-        if (window.scrollY >= navTop) {
-          nav.classList.add('sticky');
-        } else {
-          nav.classList.remove('sticky');
-        }
-      }
-      
-      window.addEventListener('scroll', stickyNavigation);
-      
-      // Initialize animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-      
-      document.querySelectorAll('.pub-item, .product-card, .fade-in').forEach(item => {
-        observer.observe(item);
-      });
-    });
-    
-    // Existing scripts for video handling, back-to-top, etc.
-    document.addEventListener('DOMContentLoaded', function() {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.addEventListener('mouseenter', () => {
-                video.play();
-                video.controls = true;
-            });
-            video.addEventListener('mouseleave', () => {
-                video.pause();
-                video.controls = false;
-            });
-        });
-    });
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            document.getElementById("back-to-top").style.opacity = "1";
-        } else {
-            document.getElementById("back-to-top").style.opacity = "0";
-        }
-    }
-    
-    document.getElementById("back-to-top").onclick = function() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-    window.addEventListener('load', function() {
-        document.getElementById('loader').style.display = 'none';
-    });
+    (function () {
+      // ---------- Theme ----------
+      const toggle = document.getElementById('dark-mode-toggle');
+      const icon = toggle.querySelector('i');
 
-    // Add this to your existing JavaScript in the DOMContentLoaded event
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all videos in product cards
-      const videos = document.querySelectorAll('.video-display video');
-      
-      videos.forEach(video => {
-        // Make sure video is muted (required for autoplay)
-        video.muted = true;
-        
-        // Add event listeners to the product card containing the video
-        const productCard = video.closest('.product-card');
-        
-        if (productCard) {
-          // Play video when hovering over the card
-          productCard.addEventListener('mouseenter', () => {
-            video.play();
-            video.controls = true;
-          });
-          
-          // Pause video when mouse leaves the card
-          productCard.addEventListener('mouseleave', () => {
-            video.pause();
-            video.controls = false;
-          });
-          
-          // Also add click handler to toggle play/pause
-          video.addEventListener('click', () => {
-            if (video.paused) {
-              video.play();
-            } else {
-              video.pause();
+      function applyTheme(dark) {
+        document.body.classList.toggle('dark-mode', dark);
+        icon.classList.toggle('fa-moon', !dark);
+        icon.classList.toggle('fa-sun', dark);
+      }
+
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(saved ? saved === 'dark' : prefersDark);
+
+      toggle.addEventListener('click', function () {
+        const dark = !document.body.classList.contains('dark-mode');
+        applyTheme(dark);
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+      });
+
+      // ---------- News toggle ----------
+      const olderNews = document.getElementById('older-news');
+      const newsToggle = document.getElementById('news-toggle');
+      const toggleText = document.getElementById('toggle-text');
+      newsToggle.addEventListener('click', function () {
+        const expanded = olderNews.hidden;
+        olderNews.hidden = !expanded;
+        newsToggle.setAttribute('aria-expanded', String(expanded));
+        newsToggle.classList.toggle('open', expanded);
+        toggleText.textContent = expanded ? 'Show less' : 'Show more';
+      });
+
+      // ---------- Reveal on scroll ----------
+      const revealTargets = document.querySelectorAll('.pub-item, .product-card, .fade-in');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
             }
           });
-        }
-      });
-    });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealTargets.forEach(el => observer.observe(el));
+      } else {
+        revealTargets.forEach(el => el.classList.add('visible'));
+      }
 
-    // Scroll progress bar and active section highlighting
-    document.addEventListener('DOMContentLoaded', function() {
+      // ---------- Product videos: play on hover ----------
+      document.querySelectorAll('.video-display video').forEach(video => {
+        video.muted = true;
+        const card = video.closest('.product-card') || video;
+        card.addEventListener('mouseenter', () => { video.play().catch(() => {}); video.controls = true; });
+        card.addEventListener('mouseleave', () => { video.pause(); video.controls = false; });
+        video.addEventListener('click', () => { video.paused ? video.play().catch(() => {}) : video.pause(); });
+      });
+
+      // ---------- Scroll: progress bar, nav shadow, back-to-top ----------
       const progress = document.getElementById('scroll-progress');
+      const nav = document.getElementById('sticky-nav');
+      const backToTop = document.getElementById('back-to-top');
+
+      function onScroll() {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const width = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+        progress.style.width = width + '%';
+        nav.classList.toggle('scrolled', scrollTop > 10);
+        backToTop.classList.toggle('show', scrollTop > 300);
+      }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      backToTop.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ---------- Active nav link ----------
+      const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
       const sections = ['profile', 'news', 'research', 'products', 'service']
         .map(id => document.getElementById(id))
         .filter(Boolean);
-      const navLinks = Array.from(document.querySelectorAll('.nav-links a'));
-
-      function updateProgress() {
-        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const width = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
-        progress.style.width = width + '%';
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+          });
+        }, { rootMargin: '-30% 0px -60% 0px', threshold: 0.05 });
+        sections.forEach(sec => sectionObserver.observe(sec));
       }
-      updateProgress();
-      window.addEventListener('scroll', updateProgress);
-
-      // Active nav link based on section in view
-      const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          const id = entry.target.getAttribute('id');
-          const link = navLinks.find(a => a.getAttribute('href') === '#' + id);
-          if (!link) return;
-          if (entry.isIntersecting) {
-            navLinks.forEach(a => a.classList.remove('active'));
-            link.classList.add('active');
-          }
-        });
-      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0.05 });
-      sections.forEach(sec => sectionObserver.observe(sec));
-    });
+    })();
   </script>
 </body>
 
