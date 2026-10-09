@@ -359,6 +359,22 @@ button {
 }
 .contact-info i { margin-right: 4px; }
 
+.hiring-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+.hiring-callout i { color: var(--primary-color); margin-top: 3px; }
+.hiring-callout strong { color: var(--primary-color); }
+
 /* =========================================================
    News
    ========================================================= */
